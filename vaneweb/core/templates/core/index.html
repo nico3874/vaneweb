@@ -1,0 +1,99 @@
+    {% extends 'core/base.html' %}
+    {% block title %}Vanesa Fernandez Fotografía|Inico {%endblock%}
+    
+    {% load static %}
+
+
+    <!-- banner post start-->
+    {% block content %}
+    <section class="banner_post">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="banner_post_1 banner_post_bg_1">
+                    <div class="banner_post_iner text-center">
+                        <a href="{%url 'newborn' %}"><h5> Ver Más</h5></a> 
+                        <h2>Newborn </h2>
+                        </div>
+                </div><div class="banner_post_1 banner_post_bg_2">
+                    <div class="banner_post_iner text-center">
+                        <a href="{% url 'minibaby' %}"><h5>Ver Más </h5></a> 
+                        <h2> Mini Baby </h2> 
+                        
+                    </div>
+                </div>
+                <div class="banner_post_1 banner_post_bg_3">
+                    <div class="banner_post_iner text-center">
+                        <a href="{% url 'fineart' %}"><h5>Ver Más</h5></a> 
+                        <h2>FineArt </h2> 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- banner post end-->
+
+    
+
+    <!-- feature_post start-->
+    <section class="all_post section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="single_post post_1 feature_post">
+                                <div class="single_post_img">
+                                    <img src="{% static 'core/img/post/hermanitos_fotografia.jpg' %}" alt=""> <!--Hacerla dinámica-->
+                                </div>
+                                <div class="single_post_text text-center">
+                                    <a href="{% url 'brothers' %}"><h5>Ver Más</h5></a> 
+                                    <h2>Hermanitos </h2>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="single_post post_1">
+                                <div class="single_post_img">
+                                    <img src="{% static 'core/img/post/maternidad-2.jpg' %}" alt="">
+                                </div>
+                                <div class="single_post_text text-center">
+                                    <a href="{% url 'maternity' %} "><h5> Ver Más</h5></a> 
+                                    <h2>Maternidad</h2>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                                <div class="single_post post_1">
+                                    <div class="single_post_img">
+                                        <img src="{% static 'core/img/post/familia-portada2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="single_post_text text-center">
+                                        <a href="{% url 'family' %}"><h5> Ver Más</h5></a> 
+                                        <h2>Familia</h2>
+                                        
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <!--Sidebar-->    
+                        
+                        <div class="single_sidebar_wiget">
+                            
+                            </div>
+                            <div class="social_share_icon tags">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+    <!-- feature_post end-->
+
+    
