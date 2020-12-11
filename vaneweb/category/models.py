@@ -108,6 +108,24 @@ class OfferCarruselChildren6 (models.Model):
         verbose_name_plural= "Familia"
 
     def __str__(self):
-        return "Oferta del {}".format(self.created.strftime("%d/%m/%Y"))        
+        return "Oferta del {}".format(self.created.strftime("%d/%m/%Y"))    
+
+class Navidad2020 (models.Model):
+    
+    image_1= models.ImageField(verbose_name="Imagen 1", upload_to='category')
+    image_2= models.ImageField(verbose_name="Imagen 2", upload_to='category')
+    image_3= models.ImageField(verbose_name="Imagen 3", upload_to='category')
+    offer_1= RichTextField(verbose_name="Combo_1",null=True, blank=True)
+    offer_2= RichTextField(verbose_name="Combo_2",null=True, blank=True)
+    
+    created= models.DateTimeField(auto_now_add="True")
+    
+
+    class Meta:
+        verbose_name= "Carrusel y Oferta"
+        verbose_name_plural= "Navidad"
+
+    def __str__(self):
+        return "Oferta del {}".format(self.created.strftime("%d/%m/%Y"))    
 
     

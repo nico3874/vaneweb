@@ -1,4 +1,4 @@
-from .models import OfferCarruselChildren, OfferCarruselChildren2, OfferCarruselChildren3, OfferCarruselChildren4, OfferCarruselChildren5, OfferCarruselChildren6
+from .models import OfferCarruselChildren, OfferCarruselChildren2, OfferCarruselChildren3, OfferCarruselChildren4, OfferCarruselChildren5, OfferCarruselChildren6, Navidad2020
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 
@@ -30,3 +30,7 @@ class Category5(Category1):
 class Category6(Category1):
     template_name = "category/carrusel_6.html"       
     category = OfferCarruselChildren6
+
+class Navidad(Category1):
+    template_name = "category/carrusel_7.html"       
+    category = Navidad2020
