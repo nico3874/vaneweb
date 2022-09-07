@@ -7,68 +7,67 @@
 
 
     
-	
+
 	
 	<!-- Start Sample Area -->
 	{%block content%}
 	
-	<section class="sample-text-area">
-		<div class="container">
-			<h3 class="text-heading text-center">Segmento de Noticias</h3>
-			<p class="sample-text text-center">
-				En este espacio publicaremos todas las novedades de nuestra empresa;<br> 
-				nuevos productos, imagenes de las sesiones, capacitaciones, promociones,<br>
-				y todas nuestras propuestas para que estén siempre actualizados sobre nuestros <br>
-				servicios.
+<section class="encabezado">
+	<div>
+		<h3 class="text-heading text-center">Segmento de Noticias</h3>
+		<p class="sample-text text-center padNot">
+			En este espacio publicaremos todas las novedades de nuestra empresa;<br> 
+			nuevos productos, imagenes de las sesiones, capacitaciones, promociones,<br>
+			y todas nuestras propuestas para que estén siempre actualizados sobre nuestros <br>
+			servicios.
 
-			</p>
+		</p>
+	</div>
+</section>
+<!-- End Sample Area -->
+
+
+
+<!-- Start Align Area -->
+{%for new in news%}
+<section class="">	
+
+	{% if not new.id|divisibleby:2 %}
+	<div  class=" ">
+		<h3 class="mb-30">{{new.title}}</h3>
+		<div class="row">
+			<div class="col-3">
+				<img  src="{{new.image.url}}" alt="" class="img-fluid">
+			</div>
+			<div class="col-9">
+				<p class="padNot">{{new.content|safe}}</p>
+			</div>
 		</div>
-	</section>
-	<!-- End Sample Area -->
-
+	</div>
+	{%endif%}
+	{% if new.id|divisibleby:2 %}
+	<div>
+		
+		<div class="row">
+			<div style="padding-left: 50px;" class=" col-6 " >
+				<h3 class="text-center">{{new.title}}</h3>
+				<p style="padding-left: 50px;">{{new.content|safe}}</p>
+			
+			</div>
+			<div class="col-6 ">
+				<img style="padding-right: 100px;" src="{{new.image.url}}" alt="" class="img-fluid">
+			</div>
+		</div>
+	</div>
 	
 
-	<!-- Start Align Area -->
-	{%for new in news%}
 	
-	<div class="whole-wrap">
-		<div class= "container box_1170">
-			{% if not new.id|divisibleby:2 %}
-			<div  class=" section-top-border">
-				<h3 class="mb-30">{{new.title}}</h3>
-				<div class="row">
-					<div class="col-md-3">
-						<img src="{{new.image.url}}" alt="" class="img-fluid">
-					</div>
-					<div  style="word-wrap: break-word;  "  class=" col-md-9 mt-sm-20 ">
-						<p >{{new.content|safe}}</p>
-					</div>
-				</div>
-			</div>
-			
-			
-			{%endif%}
-			{% if new.id|divisibleby:2 %}
-			<div class="section-top-border">
-				<h3 class="mb-30">{{new.title}}</h3>
-				<div class="row">
-					<div style="word-wrap: break-word" class=" col-md-9">
-						<p class="" style="text-align:left">{{new.content|safe}}</p>
-						
-					</div>
-					<div class="col-md-3">
-						<img src="{{new.image.url}}" alt="" class="img-fluid">
-					</div>
-				</div>
-			</div>
-			
-
-			
-			{%endif%}
-			{%endfor%}
-			{%endblock%}
-			
+	{%endif%}
+	{%endfor%}
+	{%endblock%}
+	
 							
+</section>
 
 
 	 

@@ -1,8 +1,12 @@
 {% extends "core/base.html" %}
 {% load static%}
 {% block title %}Vanesa Fernandez Fotografía|Mini Baby {% endblock %}
+
+
     
 {% block content%}
+<h1 class="text-center mt-30 pulse zoomImg">Mini Baby</h1>
+
 <!--Carousel Wrapper-->
 <div id="carousel-example-1z" class="container carousel slide carousel-fade col-sm-8 padding_white " data-ride="carousel">
   <!--Indicators-->
@@ -45,42 +49,92 @@
   </a>
   <!--/.Controls-->
 </div>
+<!-- Galeria -->
 
 <div class="container">
-  <div >
-   <h4> Mirá todos mis trabajos en <a href="{{LINK_INSTAGRAM}}" style="color: #fc4600" >Instagram</a> y <a href="{{LINK_FACEBOOK}}" style="color: #fc4600">Facebook</a></h4>
-    <br><br>
-    </div>
-  <div class="row" >
-   <div style="border-style:solid; height:auto; " class="col-xl-6 col-lg-6 col-sm-6 mb-4 mb-xl-0 text_fluid " >
-   
-      <h2 style="margin-top:20px; text-align:center " > Combo Simple</h2>
-        <p style=margin-top:40px>{{category.offer_1|safe}}</p> 
-         <div style="margin:0px auto; text-align:center; margin-bottom:20px ">
-        <form action="https://checkout.viumi.com.ar/NTgxMjQuN2U5YzNmMjgzMTU5ZDMwZDUxNjA3NzIxMzUz" >
-             <input type="submit" class="btn btn_1" value="Lo Quiero!" >
-              </form>
-                </div>
-    </div>
-      
 
-    <div style="border-style:solid; height:auto;" class="col-xl-6 col-lg-6 col-sm-6 mb-4 mb-xl-0 text_fluid">
-      <h2 style="margin-top:20px; text-align:center" > Combo Full</h2>
-       <p style=margin-top:40px>{{category.offer_2|safe}}</p>
-        <div style="margin:0px auto; text-align:center; margin-bottom:20px ">
-        <form action="https://checkout.viumi.com.ar/ZTI0LjU0MDdkNzE0M2E3OTMyNTBkMWYxNjA3NzIxOTg1" >
-             <input type="submit" class="btn btn_1" value="Lo Quiero!" >
-              </form>
-                </div>
-    </div>
+  <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Galeria Mini Baby</h1>
 
-    <!--<div class="col-xl-4 col-lg-6 col-sm-6 mb-4 mb-xl-0 text_fluid">
-      <h2> Combo 3</h2>
-        <p>{{category.offer_3}}</p>
-      </div>-->
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center text-lg-start">
+
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      {% comment %} <a href="#" class="d-block mb-4 h-100"> {% endcomment %}
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby1.jpg' %}" alt="">
+      {% comment %} </a> {% endcomment %}
     </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby2.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby3.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby4.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby5.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby6.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby7.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby8.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby9.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby10.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby11.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/minibaby/minibaby12.jpg' %}" alt="">
+    </div>
+  </div>
+
 </div>
 
+<div class="container">
+  <div class="zoomImg" style="text-align: center;" >
+   <h4> Mirá todos mis trabajos en <a class="animated slower flash infinite" href="{{LINK_INSTAGRAM}}" style="color: #74AD33" >Instagram</a> y <a class="animated slower flash infinite" href="{{LINK_FACEBOOK}}" style="color: #74AD33">Facebook</a></h4>
+    <br><br>
+  </div>
+  <div class="row">
+    
+   <div style="border-style:solid; height:auto" class="col-xl-5 col-lg-5 col-sm-5 mb-4 mb-xl-0 text_fluid paquetes " >
+      <h2 style="margin-top:20px; text-align:center; position: relative;" class="wow bounce"  > Combo Mini Baby</h2>
+        <strong style="position: relative;" class="wow fadeInDownBig"><p style="margin-top:40px " class="wow fadeInDownBig">{{category.offer_1|safe}}</p></strong>
+      <div style="margin:0px auto; position: relative; text-align:center; margin-bottom:20px ">
+        <form class="wow fadeInDownBig" action="https://checkout.viumi.com.ar/NmYxMzkuNGJhMjUwMzMzN2E1MmE2ODAxNjYxNjQzMTMw" >
+             <input type="submit" class="btn btn_1 " value="Lo Quiero!" >
+        </form>
+      </div>  
+    </div>
+    <div class="col-2"></div>
+   <div style="border-style:solid; height:auto" class="col-xl-5 col-lg-5 col-sm-5 mb-4 mb-xl-0 text_fluid paquetes" >
+      <h2 style="margin-top:20px; text-align:center; position: relative;" class="wow bounce"  > Combo Mini Baby Full</h2>
+        <strong style="position: relative;" class="wow fadeInDownBig"><p style="margin-top:40px " class="wow fadeInDownBig">{{category.offer_2|safe}}</p></strong>
+      <div style="margin:0px auto; position: relative; text-align:center; margin-bottom:20px ">
+        <form class="wow fadeInDownBig" action="https://checkout.viumi.com.ar/NjQ5YjI0LjM5YWExNjUwZDU3NmY4MGIxNjYxNjQzMTk1" >
+             <input type="submit" class="btn btn_1 " value="Lo Quiero!" >
+        </form>
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+    
+     
+    </div>
+</div>
 
 
 <script src="{% static 'core/js/jquery-1.12.1.min.js' %} "></script>

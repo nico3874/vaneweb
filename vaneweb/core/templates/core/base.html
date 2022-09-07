@@ -33,27 +33,31 @@
     <link rel="stylesheet" href="{% static 'css/liner_icon.css' %}">
     <link rel="stylesheet" href=" {% static 'core/css/search.css' %}">
     <!-- style CSS -->
-    <link rel="stylesheet" href="{% static 'core/css/style1.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <link rel="stylesheet" href="../../static/core/css/style.css">
     <!--fontawesome style-->
-    
     <link rel="stylesheet" href=" {% static 'core/css/font-awesome.css'%}">
+    <!-- wow - animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!--::header part start::-->
-    <header class="main_menu">
+    <header class="main_menu headerFondo">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <h1 class="">Vanesa Fernandez</h1>
+                        <h1 class="logo">Vanesa Fernandez</h1>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            aria-expanded="false" aria-label="Toggle navigation ">
+                            <span class="navbar-toggler-icon "></span>
                         </button>
 
-                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                        <div class="collapse navbar-collapse main-menu-item justify-content-center fondoVerde"
                             id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
@@ -66,14 +70,14 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Categorías
                                     </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu headerFondo subMenu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{% url 'newborn' %}">Newborn</a>
                                         <a class="dropdown-item" href="{% url 'minibaby' %}">Mini Baby</a>
                                         <a class="dropdown-item" href="{% url 'fineart' %}">FineArt</a>
                                         <a class="dropdown-item" href="{% url 'brothers' %}">Hermanitos</a>
                                         <a class="dropdown-item" href="{% url 'maternity' %}">Maternidad</a>
                                         <a class="dropdown-item" href="{% url 'family' %}">Familia</a>
-                                        <a  class="dropdown-item" href="{% url 'navidad' %}"><strong>Navidad</strong></a>
+                                        <!-- <a  class="dropdown-item" href="{% url 'navidad' %}"><strong>Navidad</strong></a> -->
                                     </div>
                                 </li>
                                 <!--<li class="nav-item">
@@ -82,9 +86,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{% url 'contact'%}">Contacto</a>
                                 </li>
-                                <li class="nav-item">
+                                {% comment %} <li class="nav-item">
                                     <a class="nav-link" href="{% url 'news' %}">Noticias</a>
-                                </li>
+                                </li> {% endcomment %}
                                 
                             </ul>
                         </div>
@@ -170,17 +174,17 @@
     <!-- social_connect_part part end-->
 
      <!-- footer part start-->
-	<footer class="footer-area ">
+	<footer class="footer-area headerFondo">
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-4 col-lg-6 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-					<h4>Sobre Mí</h4>
-					<p>Con más de 15 años en el rubro, seguimos ofreciendo las últimas novedades
+				<div class="padFooter col-xl-4 col-lg-4 col-sm-12">
+					<u><h3 class="text-rigth">Sobre Mí</h3></u>
+					<p class="text-justify">Con más de 15 años en el rubro, seguimos ofreciendo las últimas novedades
                      en técnicas fotográficas 
                      y de edición para que tus recuerdos tengan la calidad que se merecen </p>
 				</div>
-				<div class="col-xl-5 col-lg-6 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-					<h4>Información de Contacto</h4>
+				<div class="padFooter col-xl-4 col-lg-4 col-sm-12  ">
+					<u><h3>Información de Contacto</h3></u>
 					<ul>
 						<li><p>Dirección :Olmos 240
 								Oliva, Córdoba.</p></li>
@@ -188,38 +192,27 @@
 						<li><p>Email : foto-videovision@hotmail.com</p></li>
 					</ul>
 				</div>
-				<div class="col-xl-2 col-lg-6 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-					<h4>Conéctate</h4>
+				<div class=" padFooter col-xl-4 col-lg-4 col-sm-12">
+					<u><h3>Conéctate</h3></u>
 					<ul>
                         {%if LINK_FACEBOOK %}
-						<li><a href="{{LINK_FACEBOOK}}">Facebook</a></li>
+						<li><a class="animated slower flash infinite" href="{{LINK_FACEBOOK}}">Facebook</a></li>
                         {% endif%}
                         {%if LINK_WHATSAPP %}
-						<li><a href="{{LINK_WHATSAPP}}">Whatsapp</a></li>
+						<li><a class="animated slower flash delay-2s infinite " href="{{LINK_WHATSAPP}}">Whatsapp</a></li>
                          {% endif%}
                         {%if LINK_INSTAGRAM %}
-						<li><a href="{{LINK_INSTAGRAM}}">Instagram</a></li>
+						<li><a class="animated slower flash delay-3.5s infinite " href="{{LINK_INSTAGRAM}}">Instagram</a></li>
                          {% endif%}
 					</ul>
 				</div>
-				
+            </div>    
+		</div>		
 					
-
-							<div class="info"></div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="copyright_text">
-				<div class="">
-					<div class="container">
-						
-							<a href="{% url 'cookies' %}" class="footer-text m-0">Cookies</a> <span class="px-2"> | </span> <a href="{% url 'conditions' %}" class="footer-text m-0"> Avisos Legales </a>
-						</div>
-					</div>
-					
-				</div>
-			</div>
+		<div class="copyright_text d-flex justify-content-center">
+            <div class="subEnl">
+                <u><a href="{% url 'cookies' %}" class="footer-text m-0">Cookies</a></u> <span class="px-2"> | </span> <u><a href="{% url 'conditions' %}" class="footer-text m-0"> Avisos Legales </a></u>
+            </div>
 		</div>
 	</footer>
     <!-- footer part end-->
@@ -231,6 +224,11 @@
     <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
     <!-- custom js -->
     <script src="{% static 'core/js/custom.js' %}"></script>
+    <!-- WOW -->
+    <script src="{%static  'core/js/wow.min.js'%}"></script>
+    <script> new WOW().init();  </script>
+
 </body>
+
 
 </html>

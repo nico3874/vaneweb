@@ -3,6 +3,7 @@
 {% block title %}Vanesa Fernandez Fotografía|Familia {% endblock %}
     
 {% block content%}
+<h1 class="text-center mt-30 pulse zoomImg">Familia</h1>
 <!--Carousel Wrapper-->
 <div id="carousel-example-1z" class="container carousel slide carousel-fade col-sm-8 padding_white " data-ride="carousel">
   <!--Indicators-->
@@ -46,31 +47,78 @@
   <!--/.Controls-->
 </div>
 
-<div class="container">
-  <div >
-   <h4> Mirá todos mis trabajos en <a href="{{LINK_INSTAGRAM}}" style="color: #fc4600" >Instagram</a> y <a href="{{LINK_FACEBOOK}}" style="color: #fc4600">Facebook</a></h4>
-    <br><br>
-    </div>
-  <div class="row" >
-   <div style="border-style:solid; height:auto" class="col-xl-6 col-lg-6 col-sm-6 mb-4 mb-xl-0 text_fluid " >
-   
-      <h2 style="margin-top:20px; text-align:center "> Paquete familiar</h2>
-        <p style=margin-top:40px>{{category.offer_1|safe}}</p> 
-        <div style="margin:0px auto; text-align:center; margin-bottom:20px ">
-        <form action="https://checkout.viumi.com.ar/YjU1N2Q4MTQ1MzIyOWQxMzM5LmY3NWUxNjA3NzIyNzc3" >
-             <input type="submit" class="btn btn_1" value="Lo Quiero!" >
-              </form>
-                </div>
-    </div>
+{% comment %} Galeria {% endcomment %}
 
-   
+<div class="container">
+
+  <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Galeria Familia</h1>
+
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center text-lg-start">
+
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia1.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia2.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia3.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia4.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia5.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia6.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia7.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia8.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia9.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia10.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia11.jpg' %}"alt="">
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+        <img class="img-fluid img-thumbnail" src="{% static 'core/img/galerias/familia/familia12.jpg' %}" alt="">
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="zoomImg" style="text-align: center;" >
+   <h4> Mirá todos mis trabajos en <a class="animated slower flash infinite" href="{{LINK_INSTAGRAM}}" style="color: #74AD33" >Instagram</a> y <a class="animated slower flash infinite" href="{{LINK_FACEBOOK}}" style="color: #74AD33">Facebook</a></h4>
+    <br><br>
+  </div>
+  <div class="row">
+    <div class="col-3"></div>
+   <div style="border-style:solid; height:auto" class="col-xl-6 col-lg-6 col-sm-6 mb-4 mb-xl-0 text_fluid paquetes" >
+      <h2 style="margin-top:20px; text-align:center; position: relative;" class="wow bounce"  > Combo Familia</h2>
+        <strong style="position: relative;" class="wow fadeInDownBig"><p style="margin-top:40px " class="wow fadeInDownBig">{{category.offer_1|safe}}</p></strong>
+      <div style="margin:0px auto; position: relative; text-align:center; margin-bottom:20px ">
+        <form class="wow fadeInDownBig" action="https://checkout.viumi.com.ar/LjA1ZDk5M2I3MDJlMTE2NmEzMzI0NzkxNjYxNTU3MzYz" >
+             <input type="submit" class="btn btn_1 " value="Lo Quiero!" >
+        </form>
+      </div>  
+    </div>
+  </div>
+</div>
+
 
     
-
-    <!--<div class="col-xl-4 col-lg-6 col-sm-6 mb-4 mb-xl-0 text_fluid">
-      <h2> Combo 3</h2>
-        <p>{{category.offer_3}}</p>
-      </div>-->
+     
     </div>
 </div>
 

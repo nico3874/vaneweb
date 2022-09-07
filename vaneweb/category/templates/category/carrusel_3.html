@@ -3,6 +3,7 @@
 {% block title %}Vanesa Fernandez Fotografía|FineArt {% endblock %}
     
 {% block content%}
+<h1 class="text-center mt-30 pulse zoomImg">Fineart</h1>
 <!--Carousel Wrapper-->
 <div id="carousel-example-1z" class="container carousel slide carousel-fade col-sm-8 padding_white " data-ride="carousel">
   <!--Indicators-->
@@ -45,22 +46,104 @@
   </a>
   <!--/.Controls-->
 </div>
+{% comment %} Galeria {% endcomment %}
+
+{% comment %} <div class="container">
+
+  <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Galeria Fineart</h1>
+
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center text-lg-start">
+
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EMSDtjVHdQ8/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/8mUEy0ABdNE/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aJeH0KcFkuc/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 wow fadeIn delay-2s">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300" alt="">
+      </a>
+    </div>
+  </div>
+
+</div> {% endcomment %}
+
 <div class="container">
-  <div >
-   <h4> Mirá todos mis trabajos en <a href="{{LINK_INSTAGRAM}}" style="color: #fc4600" >Instagram</a> y <a href="{{LINK_FACEBOOK}}" style="color: #fc4600">Facebook</a></h4>
+  <div class="zoomImg" style="text-align: center;" >
+   <h4> Mirá todos mis trabajos en <a class="animated slower flash infinite" href="{{LINK_INSTAGRAM}}" style="color: #74AD33" >Instagram</a> y <a class="animated slower flash infinite" href="{{LINK_FACEBOOK}}" style="color: #74AD33">Facebook</a></h4>
     <br><br>
+  </div>
+  <div class="row">
+    <div class="col-3"></div>
+   <div style="border-style:solid; height:auto" class="col-xl-6 col-lg-6 col-sm-6 mb-4 mb-xl-0 text_fluid paquetes" >
+      <h2 style="margin-top:20px; text-align:center; position: relative;" class="wow bounce"  > Combo Fineart</h2>
+        <strong style="position: relative;" class="wow fadeInDownBig"><p style="margin-top:40px " class="wow fadeInDownBig">{{category.offer_1|safe}}</p></strong>
+      <div style="margin:0px auto; position: relative; text-align:center; margin-bottom:20px ">
+        <form class="wow fadeInDownBig" action="https://checkout.viumi.com.ar/OTU2MC40YTAxNzQ1OGI2OTM4OTI2NTkxNjYxNTU3MzE4" >
+             <input type="submit" class="btn btn_1 " value="Lo Quiero!" >
+        </form>
+      </div>  
     </div>
-  <div class="row" >
-   <div style="border-style:solid; height:auto" class="col-xl-6 col-lg-6 col-sm-6 mb-4 mb-xl-0 text_fluid " >
-   
-      <h2 style="margin-top:20px; text-align:center " > Combo FineArt</h2>
-        <p style=margin-top:40px>{{category.offer_1|safe}}</p> 
-        <div style="margin:0px auto; text-align:center; margin-bottom:20px ">
-        <form action="https://checkout.viumi.com.ar/ODcwNzE3MzI4NWQxMDIuNWZhM2U2MDAxNjA3NzIyNDk4" >
-             <input type="submit" class="btn btn_1" value="Lo Quiero!" >
-              </form>
-                </div>
+  </div>
+</div>
+
+
+    
+     
     </div>
+</div>
 
 
 
